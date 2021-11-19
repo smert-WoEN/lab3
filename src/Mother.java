@@ -6,10 +6,10 @@ public class Mother extends Human{
         super(name);
     }
 
-    void doSomething(Object o, Object o2, Object o3) {
-        if (o instanceof Cake && o2 instanceof Room && o3 instanceof Room) {
-            if (((Cake) o).getReadiness() && !((Room) o2).getHumanRoom() && ((Room) o3).getHumanRoom()) {
-                System.out.println(this + " вспоминает про " + o + o2 + " и " + o3);
+    void doSomething(Object o) {
+        if (o instanceof Cake) {
+            if (((Cake) o).getReadiness()) {
+                System.out.println(this + " вспоминает про " + o.toString() + " и уходит за ним на кухню.");
             }
         }
     }
