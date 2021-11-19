@@ -20,7 +20,7 @@ public abstract class Human {
         this.name = name;
     }
 
-    abstract void doSomething(Object o);
+    abstract void doSomething(Object o, Object o2, Object o3);
 
     @Override
     public String toString() {

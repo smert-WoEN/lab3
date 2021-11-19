@@ -6,9 +6,14 @@ public class Child extends Human{
         super(name);
     }
 
-    void doSomething(Object o) {
+    void doSomething(Object o, Object o2, Object o3) {
         this.setMentalState(MentalState.CRYING);
-        System.out.println(this + " едва плачет.");
+        if (o instanceof Room) {
+            if (((Room) o).getHumanRoom()){
+                System.out.println(this + o.toString() + " едва плачет.");
+            }
+        }
+        //System.out.println(this + " едва плачет.");
         this.setMentalState(MentalState.DISCOURAGED);
         System.out.println(this + " обескуражен.");
     }

@@ -6,9 +6,11 @@ public class Father extends Human{
         super(name);
     }
     @Override
-    void doSomething(Object o) {
-        if (o instanceof Phone) {
-            System.out.println(this.toString() + " идет говорить по " + o.toString() + ".");
+    void doSomething(Object o, Object o2, Object o3) {
+        if (o instanceof Phone && o2 instanceof Room && o3 instanceof Room) {
+            if (!((Room) o2).getHumanRoom() && ((Room) o3).getHumanRoom()) {
+                System.out.println(this + " идет говорить по " + o + o2 + o3 + ".");
+            }
         }
     }
 
