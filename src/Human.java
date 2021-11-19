@@ -1,5 +1,3 @@
-import java.util.Objects;
-
 public abstract class Human {
 
     private final String name;
