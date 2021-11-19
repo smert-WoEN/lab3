@@ -16,6 +16,6 @@ public class Phone implements Ringable{
 
     @Override
     public String toString() {
-        return "телефону";
+        return "Телефон";
     }
 }
