@@ -1,3 +1,13 @@
+package doing;
+
+import legacy.Kitchen;
+import legacy.MainRoom;
+import legacy.Room;
+import legacy.SmallRoom;
+import superclasses.Cake;
+import superclasses.Human;
+import superclasses.Ringable;
+
 public class Main {
     public static void main(String[] args) {
         Human child = new Child();

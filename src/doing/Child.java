@@ -1,4 +1,9 @@
-public class Child extends Human{
+package doing;
+
+import superclasses.Human;
+import superclasses.MentalState;
+
+public class Child extends Human {
 
     private static final String name = "Малышь";
 
@@ -6,7 +11,8 @@ public class Child extends Human{
         super(name);
     }
 
-    void doSomething(Object o) {
+    @Override
+    public void doSomething(Object o) {
         this.setMentalState(MentalState.CRYING);
         System.out.println(this + " едва плачет.");
         this.setMentalState(MentalState.DISCOURAGED);

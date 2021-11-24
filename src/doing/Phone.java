@@ -1,4 +1,8 @@
-public class Phone implements Ringable{
+package doing;
+
+import superclasses.Ringable;
+
+public class Phone implements Ringable {
 
     public void Ring() {
         System.out.println(this + " зазвонил!");

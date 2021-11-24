@@ -1,3 +1,5 @@
+package superclasses;
+
 public enum MentalState {
     NORMAL("Спокоен"),
     DISCOURAGED("Обескуражен"),

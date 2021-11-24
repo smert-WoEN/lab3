@@ -1,6 +1,10 @@
+package doing;
+
+import superclasses.Cake;
+
 import java.util.Objects;
 
-public class SweetCake implements Cake{
+public class SweetCake implements Cake {
 
     private boolean readiness = false;
 

@@ -1,14 +1,19 @@
-public class Father extends Human{
+package doing;
+
+import superclasses.Human;
+
+public class Father extends Human {
 
     private static final String name = "Папа";
 
     public Father() {
         super(name);
     }
+
     @Override
-    void doSomething(Object o) {
+    public void doSomething(Object o) {
         if (o instanceof Phone) {
-            System.out.println(this.toString() + " идет говорить по " + o.toString() + ".");
+            System.out.println(this + " идет говорить по " + o + ".");
         }
     }
 

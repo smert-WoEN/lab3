@@ -1,5 +1,6 @@
-import java.util.ArrayList;
+package legacy;
 
+@Deprecated
 public interface Room {
     String getHumanInRoom();
     void showHumanInRoom();

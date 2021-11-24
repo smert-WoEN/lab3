@@ -1,3 +1,5 @@
+package superclasses;
+
 public abstract class Human {
 
     private final String name;
@@ -16,11 +18,11 @@ public abstract class Human {
         this.mentalState = mentalState;
     }
 
-    Human(String name) {
+    public Human(String name) {
         this.name = name;
     }
 
-    abstract void doSomething(Object o);
+    public abstract void doSomething(Object o);
 
     @Override
     public String toString() {

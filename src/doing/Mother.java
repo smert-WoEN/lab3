@@ -1,4 +1,9 @@
-public class Mother extends Human{
+package doing;
+
+import superclasses.Cake;
+import superclasses.Human;
+
+public class Mother extends Human {
 
     private static final String name = "Мама";
 
@@ -6,10 +11,10 @@ public class Mother extends Human{
         super(name);
     }
 
-    void doSomething(Object o) {
+    public void doSomething(Object o) {
         if (o instanceof Cake) {
             if (((Cake) o).getReadiness()) {
-                System.out.println(this + " вспоминает про " + o.toString() + " и уходит за ним на кухню.");
+                System.out.println(this + " вспоминает про " + o + " и уходит за ним на кухню.");
             }
         }
     }

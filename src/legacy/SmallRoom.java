@@ -1,9 +1,12 @@
+package legacy;
+
+import superclasses.Human;
+
 import java.util.ArrayList;
 import java.util.Objects;
-
-public class Kitchen implements Room{
-
-    private final String name = "Кухня";
+@Deprecated
+public class SmallRoom implements Room{
+    private final String name = "Маленькую комната";
 
     ArrayList<String> humanInRoom = new ArrayList<>();
     @Override

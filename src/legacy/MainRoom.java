@@ -1,18 +1,23 @@
+package legacy;
+
+import superclasses.Human;
+
 import java.util.ArrayList;
 import java.util.Objects;
+@Deprecated
+public class MainRoom implements Room{
 
-public class SmallRoom implements Room{
-    private final String name = "Маленькую комната";
+    private final String name = "Главная комната";
 
     ArrayList<String> humanInRoom = new ArrayList<>();
     @Override
-    public String getHumanInRoom() {
-        return "" + humanInRoom;
+    public void showHumanInRoom() {
+        System.out.println("в " + this + " " + getHumanInRoom());
     }
 
     @Override
-    public void showHumanInRoom() {
-        System.out.println("в " + this + " " + getHumanInRoom());
+    public String getHumanInRoom() {
+        return "" + humanInRoom;
     }
 
     @Override
