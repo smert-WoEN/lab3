@@ -1,5 +1,5 @@
 package superclasses;
 
 public interface Ringable {
-    void Ring();
+    void ring();
 }

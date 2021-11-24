@@ -27,7 +27,7 @@ public class Main {
         mother.doSomething(sweetCake);
         mainRoom.deleteHumanFromRoom(mother);
         kitchen.addHumanInRoom(mother);
-        phone.Ring();
+        phone.ring();
         father.doSomething(phone);
         mainRoom.deleteHumanFromRoom(father);
         smallRoom.addHumanInRoom(father);

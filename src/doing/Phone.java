@@ -4,7 +4,7 @@ import superclasses.Ringable;
 
 public class Phone implements Ringable {
 
-    public void Ring() {
+    public void ring() {
         System.out.println(this + " зазвонил!");
     }
 
