@@ -1,9 +1,6 @@
 package doing;
 
-import superclasses.Cake;
-import superclasses.Human;
-import superclasses.Ringable;
-import superclasses.Room;
+import superclasses.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -18,6 +15,7 @@ public class Main {
         Room kitchen = new Kitchen();
         Room smallRoom = new SmallRoom();
 
+        ChangeRoom changeRooms = new ChangeRooms();
         mainRoom.addHumanInRoom(child);
         mainRoom.addHumanInRoom(father);
         mainRoom.addHumanInRoom(mother);
@@ -25,11 +23,9 @@ public class Main {
         child.doSomething(null);
         sweetCake.setReadiness(true);
         mother.doSomething(sweetCake);
-        mainRoom.deleteHumanFromRoom(mother);
-        kitchen.addHumanInRoom(mother);
+        changeRooms.changeRoom(mother, mainRoom, kitchen);
         phone.ring();
         father.doSomething(phone);
-        mainRoom.deleteHumanFromRoom(father);
-        smallRoom.addHumanInRoom(father);
+        changeRooms.changeRoom(father, mainRoom, smallRoom);
     }
 }
