@@ -6,7 +6,7 @@ import java.util.Objects;
 public abstract class Room {
     private final String name;
 
-    ArrayList<String> humanInRoom = new ArrayList<>();
+    ArrayList<Object> humanInRoom = new ArrayList<>();
 
     public String getName() {
         return name;
@@ -30,6 +30,8 @@ public abstract class Room {
             System.out.println(o + " зашел в " + getName());
         }
     }
+
+    public abstract void doNothing();
 
     public void deleteHumanFromRoom(Object o) {
         if (o instanceof Human){

@@ -9,6 +9,11 @@ public class MainRoom extends Room {
     }
 
     @Override
+    public void doNothing() {
+
+    }
+
+    @Override
     public int hashCode() {
         return 17 * super.hashCode();
     }
