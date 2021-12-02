@@ -5,7 +5,7 @@ import superclasses.MentalState;
 
 public class Child extends Human {
 
-    private static final String name = "Малышь";
+    private static final String name = "Малыш";
 
     public Child() {
         super(name);

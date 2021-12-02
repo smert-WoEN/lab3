@@ -16,8 +16,9 @@ public abstract class Room {
         this.name = name;
     }
 
-    public String getHumanInRoom() {
-        return "" + humanInRoom;
+    @SuppressWarnings("unchecked")
+    public ArrayList<Object> getHumanInRoom() {
+        return (ArrayList<Object>) humanInRoom.clone();
     }
 
     public void showHumanInRoom() {
