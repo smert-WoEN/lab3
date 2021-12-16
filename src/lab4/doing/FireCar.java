@@ -7,13 +7,24 @@ import superclasses.Ringable;
 
 public class FireCar implements Car {
 
-    private static final Ringable fireRing = new FireRing();
     private CarState carState = CarState.STOP;
 
     @Override
     public void moving() {
         this.setCarState(CarState.MOVING);
         System.out.print(this + " едет по улице, ");
+        Ringable fireRing = new Ringable() {
+            @Override
+            public String toString() {
+                return "Сирена";
+            }
+
+            @Override
+            public void ring() {
+                System.out.println("сигналит " + this);
+            }
+
+        };
         fireRing.ring();
     }
 
@@ -45,33 +56,6 @@ public class FireCar implements Car {
     @Override
     public boolean equals(Object obj) {
         return obj instanceof FireCar;
-    }
-
-    private static class FireRing implements Ringable {
-
-        private FireRing(){
-
-        }
-
-        @Override
-        public void ring() {
-            System.out.println("сигналит " + this);
-        }
-
-        @Override
-        public int hashCode() {
-            return 17 * super.hashCode();
-        }
-
-        @Override
-        public String toString() {
-            return "сирена";
-        }
-
-        @Override
-        public boolean equals(Object obj) {
-            return obj instanceof FireRing;
-        }
     }
 
 }
