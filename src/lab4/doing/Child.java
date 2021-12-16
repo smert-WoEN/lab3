@@ -32,12 +32,22 @@ public class Child extends HumanMoreDoing {
     }
 
     @Override
-    public void doSomethingWithHuman(Human human) {
-        dayTime.setDayTime(lab4.superclasses.DayTime.DayTimeMode.NIGHT);
-        System.out.println(dayTime);
-        System.out.println(this + " и " + human + " взялись за руки и побрели к домику");
+    public String doSomethingWithHuman(Human human) throws ChildCheckingException {
+        try {
+            if (human.getClass() == Karloson.class) {
+                dayTime.setDayTime(lab4.superclasses.DayTime.DayTimeMode.NIGHT);
+                this.setMentalState(MentalState.NORMAL);
+                System.out.println(dayTime);
+                System.out.println(this + " и " + human + " взялись за руки и побрели к домику");
+            } else {
+                this.setMentalState(MentalState.CRYING);
+                throw new IllegalArgumentException();
+            }
+        } catch (IllegalArgumentException err) {
+            throw new ChildCheckingException(human + " это не Карлосон", err);
+        }
+        return "";
     }
-
     @Override
     public void doSomething(Object o) {
         this.setMentalState(MentalState.LISTEN);
@@ -88,24 +98,5 @@ public class Child extends HumanMoreDoing {
             return 17 * dayTimeMode.hashCode();
         }
 
-    }
-
-    public static class ChildCheckingException extends Exception {
-
-        public ChildCheckingException() {
-            super();
-        }
-
-        public ChildCheckingException(String message) {
-            super(message);
-        }
-
-        public ChildCheckingException(String errorMessage, Throwable err) {
-            super(errorMessage, err);
-        }
-
-        public ChildCheckingException(Throwable cause) {
-            super(cause);
-        }
     }
 }

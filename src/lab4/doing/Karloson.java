@@ -48,8 +48,8 @@ public class Karloson extends HumanMoreDoing {
     }
 
     @Override
-    public void doSomethingWithHuman(Human human) {
-
+    public String doSomethingWithHuman(Human human) {
+        return name;
     }
 
     @Override

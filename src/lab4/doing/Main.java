@@ -41,7 +41,11 @@ public class Main {
         child.doSomethingSecond(null);
         changeRooms.changeRoom(child, mainRoom, smallHouse);
         changeRooms.changeRoom(karloson, mainRoom, smallHouse);
-        child.doSomethingWithHuman(karloson);
+        try {
+            System.out.println(child.doSomethingWithHuman(karloson));
+        } catch (ChildCheckingException e) {
+            e.printStackTrace(System.err);
+        }
 
         karloson.doSomethingSecond(null);
         child.doSomethingSecond(null);
@@ -68,5 +72,10 @@ public class Main {
             System.err.println(e.getMessage());
         }
         child.doSomethingThird(mother);
+        try {
+            System.out.println(child.doSomethingWithHuman(mother));
+        } catch (ChildCheckingException e) {
+            e.printStackTrace(System.err);
+        }
     }
 }
