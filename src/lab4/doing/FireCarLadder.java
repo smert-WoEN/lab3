@@ -10,9 +10,9 @@ public class FireCarLadder implements Ladder {
     private LadderState ladderState = LadderState.DOWN;
 
     @Override
-    public void extendLadder(){
+    public void extendLadder(Car car){
         if (getLadderState() == LadderState.DOWN)
-            throw new FireCarLadderCheckingException(this + " опущена, выдвинуть невозможно");
+            upLadder(car);
         else {
             System.out.println(this + " выдвинута");
         }

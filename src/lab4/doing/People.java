@@ -3,11 +3,12 @@ package lab4.doing;
 import superclasses.Human;
 import superclasses.MentalState;
 
-public class Fille extends Human {
-    private static final String name = "Филле";
+public class People extends Human {
+    private final String name;
 
-    public Fille() {
+    public People(String name) {
         super(name);
+        this.name = name;
     }
 
     @Override
@@ -30,6 +31,6 @@ public class Fille extends Human {
 
     @Override
     public boolean equals(Object o) {
-        return super.equals(o) && o instanceof Fille;
+        return super.equals(o) && o instanceof People;
     }
 }
